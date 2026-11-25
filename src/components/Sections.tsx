@@ -7,8 +7,8 @@ import {
   skillGroups,
   stats,
 } from "@/data/profile";
-import Avatar from "./Avatar";
 import CopyButton from "./CopyButton";
+import ProfileCube from "./ProfileCube";
 import ThemeToggle from "./ThemeToggle";
 
 function SectionHeading({ index, label, title }: { index: string; label: string; title: string }) {
@@ -51,30 +51,25 @@ export function Hero() {
       </div>
 
       <div className="hero-copy">
-        <p className="eyebrow"><span className="status-dot" aria-hidden="true" />{profile.eyebrow}</p>
-        <h1>{profile.heroTitle[0]}<br />{profile.heroTitle[1]}</h1>
-        <p className="hero-lead">{profile.heroLead}</p>
-        <div className="hero-meta">
+        <p className="eyebrow hero-line"><span className="status-dot" aria-hidden="true" />{profile.eyebrow}</p>
+        <h1 className="hero-title">
+          <span className="hero-line"><span>{profile.heroTitle[0]}</span></span>
+          <span className="hero-line"><span>{profile.heroTitle[1]}</span></span>
+        </h1>
+        <p className="hero-lead hero-line">{profile.heroLead}</p>
+        <div className="hero-meta hero-line">
           <span>{profile.title}</span>
           <span className="meta-sep" aria-hidden="true" />
           <span>{profile.location}</span>
         </div>
-        <div className="hero-actions">
+        <div className="hero-actions hero-line">
           <a className="btn btn-primary" href="#projects">看看作品 <span aria-hidden="true">→</span></a>
           <a className="btn btn-quiet" href="#about">多了解我</a>
         </div>
       </div>
 
-      <div className="hero-portrait" aria-label="个人资料卡片">
-        <div className="portrait-art">
-          <span className="portrait-mark" aria-hidden="true">{profile.initials}</span>
-          <Avatar src={profile.avatar} alt="许金元的 GitHub 头像" />
-          <div className="portrait-lines" aria-hidden="true"><span /><span /><span /></div>
-        </div>
-        <div className="portrait-caption">
-          <span>{profile.username}</span>
-          <span>{profile.status}</span>
-        </div>
+      <div className="hero-figure">
+        <ProfileCube />
       </div>
 
       <div className="scroll-hint" aria-hidden="true">
@@ -99,10 +94,10 @@ export function About() {
         </div>
       </div>
 
-      <div className="stats-grid reveal">
-        {stats.map((stat) => (
-          <div className="stat-item" key={stat.label}>
-            <strong>{stat.value}</strong>
+      <div className="stats-grid">
+        {stats.map((stat, i) => (
+          <div className="stat-item reveal reveal-rise" style={{ transitionDelay: `${i * 80}ms` }} key={stat.label}>
+            <strong data-count={stat.value}>{stat.value}</strong>
             <span>{stat.label}</span>
           </div>
         ))}
@@ -128,7 +123,7 @@ export function Skills() {
       <SectionHeading index="02" label="技能" title="手里的工具" />
       <div className="skill-list">
         {skillGroups.map((group, i) => (
-          <div className="skill-group reveal" key={group.title} style={{ transitionDelay: `${i * 60}ms` }}>
+          <div className="skill-group reveal reveal-rise" key={group.title} style={{ transitionDelay: `${i * 70}ms` }}>
             <h3>{group.title}</h3>
             <div className="skill-tags">
               {group.items.map((item) => <span className="skill-tag" key={item}>{item}</span>)}
@@ -144,7 +139,7 @@ export function Experience() {
   return (
     <section className="section container" id="experience">
       <SectionHeading index="03" label="经历" title="走过的路" />
-      <div className="timeline reveal">
+      <div className="timeline">
         <article className="timeline-item">
           <div className="timeline-marker" aria-hidden="true" />
           <div className="timeline-head">
@@ -171,7 +166,7 @@ export function Projects() {
       <SectionHeading index="04" label="项目" title="最近做的一些事" />
       <div className="project-grid">
         {projects.map((project, i) => (
-          <article className="project-card reveal" key={project.title} style={{ transitionDelay: `${i * 70}ms` }}>
+          <article className="project-card reveal reveal-rise" key={project.title} style={{ transitionDelay: `${i * 80}ms` }}>
             <div className={`project-visual visual-${i + 1}`} aria-hidden="true">
               <span className="project-visual-shape" />
               <span className="visual-tick" />
@@ -228,7 +223,7 @@ export function OpenSource() {
   return (
     <section className="section container" id="opensource">
       <SectionHeading index="05" label="开源" title="GitHub 上的痕迹" />
-      <div className="repo-list reveal">
+      <div className="repo-list">
         {repos.map((repo) => (
           <a className="repo-row" href={repo.url} target="_blank" rel="noreferrer" key={repo.name}>
             <span className="repo-icon" aria-hidden="true">
