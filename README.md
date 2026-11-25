@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 许金元 · 个人网站
 
-## Getting Started
+基于 Next.js 16（App Router）的个人作品集网站，采用「北欧柔和风」设计规范，内容来自 `个人信息参考.md`（GitHub 主页 + 简历）。
 
-First, run the development server:
+## 本地运行
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+打开 <http://localhost:3000>。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+生产构建：
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+## 技术栈
 
-To learn more about Next.js, take a look at the following resources:
+- Next.js 16 App Router + React 19 + TypeScript
+- 纯 CSS 设计系统（无 UI 框架），色值 / 圆角 / 断点与 `personal-site/设计规范.html` 一致
+- 深浅色主题切换（记忆到 localStorage，跟随系统偏好）
+- IntersectionObserver 滚动显现 + 导航高亮
+- 尊重 `prefers-reduced-motion`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 目录结构
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+src/
+├── app/
+│   ├── layout.tsx      # 元数据、主题初始化脚本
+│   ├── page.tsx        # 页面组合
+│   └── globals.css     # 设计系统与全部样式
+├── components/
+│   ├── Sections.tsx    # 各页面区块
+│   ├── Motion.tsx      # 滚动显现与导航高亮（客户端）
+│   ├── ThemeToggle.tsx # 主题切换（客户端）
+│   └── CopyButton.tsx  # 一键复制联系方式（客户端）
+└── data/
+    └── profile.ts      # 全部个人信息（单一数据源）
+```
 
-## Deploy on Vercel
+## 修改内容
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+所有个人信息集中在 `src/data/profile.ts`：
+- `profile` — 姓名、联系方式、简介、教育背景
+- `stats` — 首页数据概览
+- `skillGroups` — 技能分组
+- `experience` — 工作经历
+- `projects` — 三个项目（含技术栈、亮点、指标、源码链接）
+- `repos` — GitHub 公开仓库
+- `navLinks` — 导航项
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+修改数据文件后页面自动更新，无需改动组件。
