@@ -5,7 +5,6 @@ import {
   projects,
   repos,
   skillGroups,
-  stats,
 } from "@/data/profile";
 import CopyButton from "./CopyButton";
 import ProfileCube from "./ProfileCube";
@@ -92,15 +91,6 @@ export function About() {
           <div><span>教育</span><strong>{profile.education.school} · {profile.education.major}</strong></div>
           <div><span>关注</span><strong>Agent 编排 / RAG / 人机协同</strong></div>
         </div>
-      </div>
-
-      <div className="stats-grid">
-        {stats.map((stat, i) => (
-          <div className="stat-item reveal reveal-rise" style={{ transitionDelay: `${i * 80}ms` }} key={stat.label}>
-            <strong data-count={stat.value}>{stat.value}</strong>
-            <span>{stat.label}</span>
-          </div>
-        ))}
       </div>
 
       <div className="education reveal">
@@ -283,7 +273,6 @@ export function Footer() {
   return (
     <footer className="site-footer container">
       <span>© 2026 {profile.name}</span>
-      <span className="footer-note"><span className="footer-spark" aria-hidden="true" />Built with Next.js · 北欧柔和风</span>
       <a href="#top">回到顶部 ↑</a>
     </footer>
   );

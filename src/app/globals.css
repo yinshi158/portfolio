@@ -360,15 +360,7 @@ html.motion-ready .hero-actions.hero-line { animation-name: hero-fade; }
 .about-meta span { font-size: 12px; color: var(--muted); }
 .about-meta strong { font-size: 14px; font-weight: 500; }
 
-.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 48px; }
-.stat-item {
-  display: grid; gap: 4px; padding: 22px; background: var(--surface);
-  border: 1px solid var(--line); border-radius: var(--radius-md);
-}
-.stat-item strong { font-size: 26px; font-weight: 500; letter-spacing: -0.03em; color: var(--accent-ink); }
-.stat-item span { font-size: 12px; color: var(--muted); }
-
-.education { display: flex; gap: 20px; align-items: flex-start; margin-top: 56px; }
+.education { display: flex; gap: 20px; align-items: flex-start; margin-top: 48px; }
 .education h3 { font-size: 15px; font-weight: 500; margin-bottom: 10px; }
 .education-line { font-size: 14px; }
 .education-line strong { font-weight: 500; }
@@ -532,7 +524,6 @@ html.motion-ready .hero-actions.hero-line { animation-name: hero-fade; }
   font-size: 12px; color: var(--muted);
 }
 .site-footer a:hover { color: var(--text); }
-.footer-spark { display: inline-block; width: 6px; height: 6px; margin-right: 9px; vertical-align: middle; border-radius: 50%; background: var(--accent); }
 
 /* ---------- reveal · 渐进增强：默认可见，JS 观察器就绪后才隐藏 ---------- */
 .reveal { opacity: 1; }
@@ -551,7 +542,6 @@ html.has-reveal .reveal.is-visible { opacity: 1; transform: none; clip-path: ins
   .hero { gap: 40px; padding-block: 72px 88px; }
   .about-grid { gap: 36px; }
   .project-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .stats-grid { grid-template-columns: repeat(2, 1fr); }
   .skill-group { grid-template-columns: 130px 1fr; gap: 20px; }
   .repo-row { grid-template-columns: 24px minmax(0, 1fr) 100px 20px; }
   .repo-license, .repo-meta { display: none; }
@@ -574,9 +564,6 @@ html.has-reveal .reveal.is-visible { opacity: 1; transform: none; clip-path: ins
   .section { padding-block: 60px; }
   .section-watermark { font-size: 58px; top: -12px; }
   .about-grid { grid-template-columns: 1fr; }
-  .stats-grid { gap: 10px; }
-  .stat-item { padding: 18px; }
-  .stat-item strong { font-size: 22px; }
   .skill-group { grid-template-columns: 1fr; gap: 14px; }
   .timeline-head { flex-direction: column; gap: 4px; }
   .project-grid { grid-template-columns: 1fr; }
@@ -586,8 +573,6 @@ html.has-reveal .reveal.is-visible { opacity: 1; transform: none; clip-path: ins
   .contact-orbit { width: 180px; height: 180px; top: -90px; right: -60px; }
   .contact-star { left: 22px; bottom: 24px; }
   .contact-grid { grid-template-columns: 1fr; }
-  .site-footer { flex-wrap: wrap; }
-  .footer-note { order: 3; width: 100%; }
 }
 
 @media (max-width: 400px) {

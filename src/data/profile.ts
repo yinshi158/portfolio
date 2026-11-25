@@ -56,13 +56,6 @@ export const profile = {
   status: "开放求职机会",
 };
 
-export const stats = [
-  { value: "03", label: "核心项目" },
-  { value: "23", label: "接入 ERP 工具" },
-  { value: "115/115", label: "意图验收通过" },
-  { value: "05", label: "公开开源仓库" },
-];
-
 export const skillGroups: SkillGroup[] = [
   {
     title: "Agent 与编排",
@@ -73,7 +66,6 @@ export const skillGroups: SkillGroup[] = [
       "MCP / FastMCP",
       "多 Agent 委派",
       "HITL 中断恢复",
-      "任务规划",
       "上下文与记忆管理",
     ],
   },
@@ -85,9 +77,6 @@ export const skillGroups: SkillGroup[] = [
       "Milvus",
       "ChromaDB",
       "MySQL IDF 召回",
-      "bge-small-zh-v1.5",
-      "Prompt 优化",
-      "来源引用",
     ],
   },
   {
@@ -99,8 +88,6 @@ export const skillGroups: SkillGroup[] = [
       "FastAPI",
       "Next.js / React",
       "Vue",
-      "Node.js / Fastify",
-      "Rust / Kotlin（基础）",
     ],
   },
   {
