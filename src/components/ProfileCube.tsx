@@ -273,11 +273,11 @@ export default function ProfileCube() {
       label: "姓名与职位",
       render: (
         <>
-          <span className="cube-face-kicker">AI 应用开发工程师</span>
-          <span className="cube-face-mark">XJY</span>
+          <span className="cube-face-kicker">{profile.title}</span>
+          <span className="cube-face-mark">{profile.initials}</span>
           <strong className="cube-face-name">{profile.name}</strong>
           <span className="cube-face-rule" />
-          <span className="cube-face-foot">把大模型能力做成可用的产品</span>
+          <span className="cube-face-foot">把大模型能力做成可落地的产品</span>
         </>
       ),
     },

@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "许金元 · AI 应用开发工程师",
+  title: "许金元",
   description:
-    "许金元的个人网站 — AI 应用开发工程师，专注 Agent 编排、RAG 检索与人机协同。",
-  keywords: ["许金元", "AI 应用开发", "Agent", "RAG", "LangGraph", "个人网站"],
+    "许金元的个人网站 — AI + 全栈 + Agent开发，专注 Agent 编排、RAG 检索与人机协同。",
+  keywords: ["许金元", "AI + 全栈 + Agent开发", "Agent", "RAG", "LangGraph", "个人网站"],
   openGraph: {
-    title: "许金元 · AI 应用开发工程师",
-    description: "把大模型能力，做成可用的产品。",
+    title: "许金元 · AI + 全栈开发",
+    description: "把大模型能力，做成可落地的产品。",
     type: "website",
   },
 };

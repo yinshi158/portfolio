@@ -33,15 +33,15 @@ export type Repo = {
 
 export const profile = {
   name: "许金元",
-  initials: "XJY",
+  initials: "",
   username: "yinshi158",
-  title: "AI 应用开发工程师",
-  eyebrow: "你好，我是许金元",
-  heroTitle: ["把大模型能力，", "做成可用的产品。"],
+  title: "AI + 全栈 + Agent开发",
+  eyebrow: "Hello",
+  heroTitle: ["不断打补丁","偶尔重构自己"],
   heroLead:
-    "AI 应用开发工程师，专注 Agent 编排、RAG 检索与人机协同。相信好的工程，是让复杂的技术安静地工作。",
+    "拆解过 Pi Agent 的实现，理解 Agent 核心的运行逻辑。专注 Agent 编排、RAG 检索与人机协同。相信好的工程，是让复杂的技术安静地工作。",
   intro:
-    "我做 AI 应用，也写工程。从 RAG 知识库到多 Agent 编排，习惯把模糊的需求拆成可验证的步骤，再一步步落到能跑、能测、能交付的系统里。比起炫技，我更在意稳定性、可观测性和真实的评测结果。",
+    "我做 AI 应用，也写工程。从 RAG 知识库到多 Agent 编排，学过Langgraph，熟悉Agent状态图。习惯把模糊的需求拆成可验证的步骤，再一步步落到能跑、能测、能交付的系统里。比起炫技，我更在意稳定性、可观测性和真实的评测结果。",
   location: "河南 · 郑州",
   email: "2116250985@qq.com",
   phone: "178-3824-5210",
@@ -53,7 +53,7 @@ export const profile = {
     degree: "本科",
     courses: ["C 语言程序设计", "Python 程序设计", "数据结构", "人工智能导论"],
   },
-  status: "开放求职机会",
+  status: "不定期向GitHub投毒",
 };
 
 export const skillGroups: SkillGroup[] = [
@@ -87,7 +87,7 @@ export const skillGroups: SkillGroup[] = [
       "JavaScript",
       "FastAPI",
       "Next.js / React",
-      "Vue",
+      "Vue3",
     ],
   },
   {
@@ -95,12 +95,11 @@ export const skillGroups: SkillGroup[] = [
     items: [
       "MySQL",
       "MongoDB",
-      "SQLite (WAL)",
       "SQLAlchemy",
       "SSE 流式输出",
       "Docker",
       "Linux",
-      "阿里云 / 腾讯云",
+      "阿里云VPC + ECS + SLB + RDS + OSS",
     ],
   },
   {
@@ -118,7 +117,7 @@ export const skillGroups: SkillGroup[] = [
 
 export const experience = {
   company: "天桥短剧",
-  role: "AI 应用开发工程师",
+  role: "AI + 全栈工程师",
   period: "2026.06 — 2026.09",
   points: [
     {
