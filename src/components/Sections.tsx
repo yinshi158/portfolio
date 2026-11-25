@@ -15,7 +15,7 @@ function SectionHeading({ index, label, title }: { index: string; label: string;
     <div className="section-head reveal">
       <span className="section-watermark" aria-hidden="true">{index}</span>
       <p className="section-label"><span className="label-dash" aria-hidden="true" />{index} / {label}</p>
-      <h2>{title}</h2>
+      <h2 data-scroll-skew>{title}</h2>
     </div>
   );
 }
